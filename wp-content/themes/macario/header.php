@@ -44,3 +44,4 @@ if( $_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '187.188.11
     <!-- Google Analytics -->
 </head>
 <body <?php body_class("normal");?>>
+<div class="layernegro"></div>

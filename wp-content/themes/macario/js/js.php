@@ -16,8 +16,135 @@ function cargando(id){ if(id){ if($('#'+id).length<1){ $('body').append('<div id
 /*CARGANDO GAFA FIN--------------------------------------------------------------------*/
 function decodeDreamWaverPass(hash){ var pass = ''; for (var i=0 ; i<hash.length ; i+=2){ pass+=String.fromCharCode(parseInt(hash[i]+''+hash[i+1],16)-(i/2)); } return pass;}
 
+
+
+
+/*------------------inview--------------*/
+(function ($) {
+    function getViewportHeight() {
+        var height = window.innerHeight; // Safari, Opera
+        var mode = document.compatMode;
+
+        if ( (mode || !$.support.boxModel) ) { // IE, Gecko
+            height = (mode == 'CSS1Compat') ?
+            document.documentElement.clientHeight : // Standards
+            document.body.clientHeight; // Quirks
+        }
+
+        return height;
+    }
+
+    $(window).scroll(function () {
+        var vpH = getViewportHeight(),
+            scrolltop = (document.documentElement.scrollTop ?
+                document.documentElement.scrollTop :
+                document.body.scrollTop),
+            elems = [];
+
+        // naughty, but this is how it knows which elements to check for
+        $.each($.cache, function () {
+            if (this.events && this.events.inview) {
+                elems.push(this.handle.elem);
+            }
+        });
+
+        if (elems.length) {
+            $(elems).each(function () {
+                var $el = $(this),
+                    top = $el.offset().top,
+                    height = $el.height(),
+                    inview = $el.data('inview') || false;
+
+                if (scrolltop > (top + height) || scrolltop + vpH < top) {
+                    if (inview) {
+                        $el.data('inview', false);
+                        $el.trigger('inview', [ false ]);
+                    }
+                } else if (scrolltop < (top + height)) {
+                    if (!inview) {
+                        $el.data('inview', true);
+                        $el.trigger('inview', [ true ]);
+                    }
+                }
+            });
+        }
+    });
+
+    $(function () {
+        $(window).scroll();
+    });
+})(jQuery);
+/*------------------inview--------------*/
+
+
+
 jQuery(document).ready(function(){
 	$ = jQuery;
+
+
+	$('.seccionfade').bind('inview', function (event, visible) {
+		if (visible == true) {
+			setTimeout(function () {
+				$('.seccionfade').addClass('seccionvisible');
+			}, 600);
+  		}
+	});
+	$('.seccionfade2').bind('inview', function (event, visible) {
+  		if (visible == true) {
+			setTimeout(function () {
+				$('.seccionfade2').addClass('seccionvisible');
+			}, 600);
+  		}
+	});
+	$('.seccionfade4').bind('inview', function (event, visible) {
+  		if (visible == true) {
+			setTimeout(function () {
+				$('.seccionfade4').addClass('seccionvisible');
+			}, 600);
+  		}
+	});
+
+	$('.botonmenu').on('click', function(){
+		$(this).toggleClass('menu_abierto');
+		$('.textobanner').toggleClass('textobannermedium');
+		$('.mnit1').toggleClass('mtlnext');
+		setTimeout(function () {
+			$('.mnit2').toggleClass('mtlnext');
+		}, 130);
+		setTimeout(function () {
+			$('.mnit3').toggleClass('mtrnext');
+		}, 260);
+		setTimeout(function () {
+			$('.mnit4').toggleClass('mtrnext');
+		}, 390);
+	})
+
+	setTimeout(function () {
+		$('.layernegro').css({'opacity':'0'})
+		$('.layernegro').css({'pointer-events':'none'})
+	}, 700);
+
+	setTimeout(function () {
+		$('.logocabecera').css({'opacity':'1'})
+		$('.logocabecera').css({'top':'4%'})
+	}, 1000);
+
+	setTimeout(function () {
+		$('.botonmenu').css({'opacity':'1'})
+		$('.botonmenu').css({'top':'4%'})
+	}, 1200);
+
+	setTimeout(function () {
+		$('.textobanner').css({'opacity':'1'})
+		$('.textobanner').css({'top':'50%'})
+	}, 1400);
+
+	setTimeout(function () {
+		$('.redescabecera').css({'opacity':'1'})
+		$('.redescabecera').css({'bottom':'4%'})
+	}, 1600);
+
+	$('.seccion1').css({'background-size':'100%'});
 
 	$('[data-link]').on('click',function(){
 		document.location.href = $(this).data('link');
