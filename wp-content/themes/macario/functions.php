@@ -20,10 +20,9 @@ $colores = array(
 );
 
 $tamanos = array(
-	'v_small'	=> '10px',
-	'small'		=> '11px',
-	'medium'	=> '12px',
+	'small'		=> '20px',
 	'normal'	=> '14px',
+	'title'		=> '50px',
 );
 /*OPCIONES*/
 set_options_gafa();
@@ -34,142 +33,7 @@ function set_options_gafa(){
 	define('HOME',		$home);
 	*/
 };
-function seccion1(){
-?>
-	<div class="section negro seccion1">
-		<div class="cabecera">
-			<div class="logocabecera">
-				<img src="<?php plantilla(); ?>/images/logo.png" alt="Logo de macario" />
-			</div>
-		</div>
-		<div class="botonmenu">
-			<span class="lineamenu lm1"></span>
-			<span class="lineamenu lm2"></span>
-			<span class="lineamenu lm3"></span>
-		</div>
-		<div class="textobanner sansnormal uppercase color_blanco">
-			<div><span class="bolder">a</span> <span class="lighter attach">not so</span></div>
-			<div><span class="bolder">different</span></div>
-			<div class="inlineraya"><div class="rayabanner"></div><!-- --><span class="bolder texto--raya">folio</span></div>
-		</div>
-		<div class="menubanner color_blanco sansbold uppercase">
-			<div class="menuitem mnit1"><span class="rayitamenu"></span> about us</div>
-			<div class="menuitem mnit2"><span class="rayitamenu"></span> blog</div>
-			<div class="menuitem mnit3"><span class="rayitamenu"></span> project</div>
-			<div class="menuitem mnit4"><span class="rayitamenu"></span> contact</div>
-		</div>
-		<div class="">
 
-		</div>
-		<div class="redescabecera">
-			<a href="#" class="redcabecera redctw" target="_blank"></a>
-			<a href="#" class="redcabecera redcfb" target="_blank"></a>
-			<a href="#" class="redcabecera redcli" target="_blank"></a>
-		</div>
-	</div>
-<?php
-}
-function seccion2(){
-?>
-	<div class="section blanco">
-		<div class="seccion-2-row seccionfade">
-			<div class="cabeceraseccion cbs1 verde">
-				<div class="textocabecera color_blanco uppercase sansnormal">
-					about us
-				</div>
-			</div>
-			<div class="infostaff color_gris_o text-left seccionfade2">
-				<div class="normal uppercase bolder sansbold">staff.</div>
-				<div class="medium lighter parrafo sanslight">Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus. </div>
-				<div class="medium lighter parrafo sanslight">Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus. </div>
-			</div>
-		</div><!--
-	 --><div class="seccion-2-row seccionfade">
-	 		<div class="estudioseccion">
-	 			<div class="estudio--row">
-					<div class="medium bolder parrafo sansbold">Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus. </div>
-					<div class="medium bolder parrafo sansbold">Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus. </div>
-					<div class="medium bolder parrafo sansbold">Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus. </div>
-
-					<div class="medium lighter parrafo sanslight">Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus. </div>
-					<div class="medium lighter parrafo sanslight">Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus. </div>
-					<div class="medium lighter parrafo sanslight">Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus. </div>
-	 			</div><!--
-			 --><div class="estudio--row">
-					<div class="fotoestudio"></div>
-	 			</div>
-	 		</div>
-			<div class="teamseccion seccionfade2">
-				<div class="team-member">
-					<div class="memberphoto"></div>
-					<div class="memberinfo text-left small color_gris_o uppercase">
-						<div class="bolder sansbold v_small">sonia ibarra</div>
-						<div class="lighter sanslight v_small">designer</div>
-					</div>
-					<div class="memberlinks">
-						<div class="mlinkitem memberinline">
-							<div class="normal uppercase color_gris_o medium sansnormal">cv <img src="<?php plantilla(); ?>/images/flechamember.png" class="flechamember" /> </div>
-						</div>
-						<div class="mlinkitem memberinline">
-							<a href="#" class="redmember redfb" target="_blank"></a>
-							<a href="#" class="redmember redtw" target="_blank"></a>
-							<a href="#" class="redmember redli" target="_blank"></a>
-							<a href="#" class="redmember redgmas" target="_blank"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php
-}
-function seccion3(){
-?>
-	<div class="seccionprojects">
-		<div class="medium color_blanco posicionar">
-			jhbbjhb
-		</div>
-	</div>
-<?php
-}
-function seccion4(){
-?>
-	<div class="section seccionfade4 bajarsec">
-		<div class="contacto--row">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.839188749717!2d-99.16428918505171!3d19.419352946136097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3a1d3d7d93%3A0xc6c52a6bb90548f1!2sColima+220%2C+Roma+Nte.%2C+06700+Ciudad+de+M%C3%A9xico%2C+D.F.!5e0!3m2!1ses!2smx!4v1453022322335" width="87%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div><!--
-	 --><div class="contacto--row text-left color_gris_o sansnormal medium">
-			<div class="contacto--direccion uppercase">
-				90802 MONTE ALBAN 301. PO 68789
-				MÉXICO, DISTRITO FEDERAL
-			</div>
-			<div class="contacto--lineas uppercase">
-				<div class="contactofon">
-					+64 9 345 6758
-				</div>
-				<div class="contactomail">
-					info@CASAMACARIO.MX
-				</div>
-				<div class="contacto--legal">
-					<img src="<?php plantilla(); ?>/images/copy.png"/> 2015  DSGN. All rights reserved - MACARIO CASA CREATIVA
-				</div>
-			</div>
-			<div class="contacto--logos sansbold">
-				<img src="<?php plantilla(); ?>/images/logo2.png" alt="" />
-				<div class="separator"></div>
-				<div class="uppercase bolder normal color_gris_o">associates</div>
-				<div class="uppercase bolder normal color_gris_o">studio</div>
-				<div class="uppercase bolder normal color_gris_o">design</div>
-				<div class="contacto-redes">
-					<a href="#" class="redcontacto redtw2" target="_blank"></a>
-					<a href="#" class="redcontacto redli2" target="_blank"></a>
-					<a href="#" class="redcontacto redgmas2" target="_blank"></a>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php
-}
 
 function get_last_post( $post_type = false ){
 	if( !$post_type ){ return; };
