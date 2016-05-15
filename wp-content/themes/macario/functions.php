@@ -5,24 +5,25 @@ if( isset( $_POST['ajax_gafa'] ) ){
 	require_once('procesos/ajax.php');
 };
 /*COLORES*/
-define( 'GRIS',	'silver' );
+define( 'GRIS',	'#f4f4f4' );
 define( 'NEGRO','black' );
 define( 'BLANCO','white' );
 define( 'GRIS_O','#333333');
-define( 'VERDE','#b8d19c');
+define( 'AZUL','#002eff');
 
 $colores = array(
 	'gris'	=> GRIS,
 	'negro'	=> NEGRO,
 	'blanco'=> BLANCO,
 	'gris_o'=> GRIS_O,
-	'verde'	=> VERDE,
+	'azul'	=> AZUL,
 );
 
 $tamanos = array(
-	'small'		=> '20px',
-	'normal'	=> '14px',
+	'small'		=> '17px',
+	'normal'	=> '40px',
 	'title'		=> '50px',
+	'titlesp'	=> '100px',
 );
 /*OPCIONES*/
 set_options_gafa();
@@ -34,7 +35,94 @@ function set_options_gafa(){
 	*/
 };
 
+function slideuno(){
+?>
+<div class="contenidouno content">
+	<div class="texto-superior color_blanco monse text-left">
+		<div class="title bolder s1title">
+			Hola! <img src="<?php plantilla(); ?>/images/peace.png" class="peace" />
+		</div>
+		<div class="title bolder shadowtext s1content">
+			Somos Macario, potenciadores de marcas
+		</div>
+		<div class="small shadowtext s1content s1last lighter">
+			Creamos experiencias asombrosas
+		</div>
+		<div class="small botonaccion color_blanco text-center monse s1buton pointer botontrabajo">
+			Nuestro trabajo
+		</div>
+	</div>
+</div>
+<?php
+}
 
+function slidedos(){
+	$IdsAplicaciones = get_posts(array(
+		'post_type'     => 'proyectos',
+		'posts_per_page'=> -1,
+		'fields'        => 'ids',
+		'orderby'		=> 'date',
+		'order'			=> 'ASC',
+	));
+?>
+	<div class="contenidodos content">
+		<div class="carrete-proyecto">
+			<?php
+			foreach ($IdsAplicaciones as $ids) {
+				$proyecto = new macario\Proyectos($ids);
+				echo'
+				<div class="proyecto-item">
+					<div class="slide-proyectos spleft">
+						<div class="info-proyecto text-left">
+							<div class="color_azul monse pititulo title bolder">
+								'.$proyecto->Nombre.'
+							</div>
+							<div class="color_azul monse pititulo small lighter">
+								'.$proyecto->Desc_corta.'
+							</div>
+							<a href="'.$proyecto->Permalink.'" class="boton-proyecto color_azul botonaccion monse small text-center">Ver proyecto</a>
+						</div>
+					</div><!--
+					--><div class="slide-proyectos spleft" style="background-image:url('.$proyecto->Foto_principal.')">
+
+					</div>
+				</div>';
+			}
+		 	?>
+		</div>
+	</div>
+<?php
+}
+function slidetres(){
+?>
+<div class="contenidotres content">
+	<div class="texto-superior color_blanco monse text-left lighter">
+		<div class="title shadowtext s1content">
+			Somos <span class="color_azul">Macario</span>.
+		</div>
+		<div class="title shadowtext s1content">
+			<span class="color_azul">Experiencias</span> creadas <span class="color_azul">a la medida</span>.
+		</div>
+		<div class="small shadowtext s1content s1last lighter">
+			Nos mueven las ideas, sin importar su tamaño.
+		</div>
+		<div class="small botonaccion color_blanco text-center monse s1buton pointer botontrabajo">
+			Nuestro trabajo
+		</div>
+	</div>
+</div>
+<?php
+}
+function slidecuatro(){
+?>
+	<div class="contenidocuatro content">
+		<div class="monse color_blanco text-center title bolder">
+			¡Mandanos un mail!
+		</div>
+		<a href="mailto:hola@casamacario.mx" class="boton-envia blanco text-center color_azul monse small botonaccion">hola@casamacario.mx</a>
+	</div>
+<?php
+}
 function get_last_post( $post_type = false ){
 	if( !$post_type ){ return; };
 

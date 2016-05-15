@@ -1,17 +1,75 @@
 <?php
-define('DB_NAME', 'macario');
+/**
+ * Configuración básica de WordPress.
+ *
+ * Este archivo contiene las siguientes configuraciones: ajustes de MySQL, prefijo de tablas,
+ * claves secretas, idioma de WordPress y ABSPATH. Para obtener más información,
+ * visita la página del Codex{@link http://codex.wordpress.org/Editing_wp-config.php Editing
+ * wp-config.php} . Los ajustes de MySQL te los proporcionará tu proveedor de alojamiento web.
+ *
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
+ *
+ * @package WordPress
+ */
 
-/** Tu nombre de usuario de MySQL */
-define('DB_USER', 'macario');
+ /*
+ ** SETEO CORRECTO DE CONSTANTES EN WP-CONFIG
+ */
+ set_constantes_hack();
+ function set_constantes_hack(){
+ 	$dev = false;
+ 	$desarrollos = array(
+ 		'localhost',
+ 		'187.188.119.69',
+ 		'192.168',
+ 		'.ngrok.io',
+ 		'gafa.codes',
+ 	);
+ 	$protocolo = 'http';
+ 	foreach( $desarrollos as $aguja ){
+ 		/*
+ 		** BUSCAMOS SI ESTAMOS O NO EN DEV
+ 		*/
+ 		if( strpos( $_SERVER['HTTP_HOST'] ,$aguja) !== false ){
+ 			$dev = true;
+ 			define('DESARROLLO', true);
 
-/** Tu contraseña de MySQL */
-define('DB_PASSWORD', 'aBLSqAwzr4sBPjXK');
+ 			define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'].'/'.basename(__DIR__) );
+ 			define('WP_HOME',    WP_SITEURL);
 
-/** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST', 'localhost');
+ 			if( $_SERVER['SERVER_ADMIN'] === 'mario@gafa.mx'){
+ 				define('DB_HOST', 'localhost');
+ 			}else{
+ 				define('DB_HOST', 'localhost');
+ 			};
+ 			//define('DB_HOST', '187.188.119.69');
+
+ 			define('DB_USER', 'macario');
+ 			define('DB_NAME', 'macario');
+
+ 			define('DB_PASSWORD', 'aBLSqAwzr4sBPjXK');
+ 			return;
+ 		};
+ 	};
+ 	if( !$dev ){
+ 		/*
+ 		** VALORES DEL SITIO REMOTO
+ 		*/
+ 		define('DESARROLLO', false);
+
+ 		define('WP_SITEURL', $protocolo.'://' . $_SERVER['SERVER_NAME'] );
+ 		define('WP_HOME',    WP_SITEURL);
+
+ 		define('DB_HOST', '');
+ 		define('DB_USER', '');
+ 		define('DB_NAME', '');
+ 	};
+ };
 
 /** Codificación de caracteres para la base de datos. */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
@@ -25,14 +83,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('SECURE_AUTH_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('LOGGED_IN_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('NONCE_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('AUTH_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('SECURE_AUTH_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('LOGGED_IN_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('NONCE_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+define('AUTH_KEY', '1U[;N|[VU{89O-jD ]K{5F$=c7hBwY{%#&~vB9oJi`B[NB J+.1AY*j^++!|5&~;');
+define('SECURE_AUTH_KEY', 'Tzd5(kI%4f-,5{{%|SLbOj-w(h>L+BK&eoH#Oxs%wzz>_2Pv&NC|!`!=;Os_1-pN');
+define('LOGGED_IN_KEY', 'jXtH7)P_SU;+47sn<GO|4<?9N#mw^w:}B a,cf9h+a?g(6vA_zHl[EL+)vSif17N');
+define('NONCE_KEY', 'BWNgOkcH<5UOMvYxl7BQUAIdFgeeleuJ3Ot*74t*nqKFVhD1([vGg`?I,j|n:0M_');
+define('AUTH_SALT', '%>,RAJOqS+)oSst[ H,*JP7)2%128$*p,3?0%X^vx|>)}{on/z*S]*?P$v&u,`ep');
+define('SECURE_AUTH_SALT', 'CyoOLJ`O3Nu%RVL#52gRN@1srv2$04X +f7uvp6!3j[L^J*4bb8$>_P-_V:#8eY/');
+define('LOGGED_IN_SALT', 'y`d@d1`xx3EPu)J>+S{9/P`34l/$*+MOAi;hFF5-j$wKj{s^<2&:rnc~~5**b-s=');
+define('NONCE_SALT', 'tg>x-PQ1dIs2yl(H4vYGeFwSZc@L_8Z=$F.H l-~]UqzBf;6.<WaGeYX]Tm]VW%S');
 
 /**#@-*/
 

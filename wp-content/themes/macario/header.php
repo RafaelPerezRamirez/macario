@@ -26,3 +26,25 @@
     <!-- Google Analytics -->
 </head>
 <body <?php body_class("normal");?>>
+<div class="logo-macario">
+    <img src="<?php plantilla(); ?>/images/logo1.png" class="logo1"/>
+    <img src="<?php plantilla(); ?>/images/logo2.png" class="logo2"/>
+</div>
+<div class="boton-menu">
+    <span class="spmenu1"></span>
+    <span class="spmenu2"></span>
+    <span class="spmenu3"></span>
+</div>
+<div class="menu-completo blanco">
+    <div class="links-menu color_gris bolder">
+        <div class="pointer titlesp monse link-menu lm1">
+            Si, somos Macario
+        </div>
+        <div class="pointer titlesp monse link-menu lm2">
+            Si, somos Macario
+        </div>
+        <div class="pointer titlesp monse link-menu lm3">
+            Si, somos Macario
+        </div>
+    </div>
+</div>

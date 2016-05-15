@@ -1,3 +1,4 @@
+
 <script type="text/javascript">// <![CDATA[
 "use strict";
 
@@ -15,13 +16,31 @@ function crear_pregunta( texto,info,callback,legal, false_function, data_false )
 function cargando(id){ if(id){ if($('#'+id).length<1){ $('body').append('<div id="'+id+'" class="cover" style="display:none;"></div>'); $('#'+id).fadeIn(); }; }else{ if($('#cargando').length<1){ $('body').append('<div id="cargando" class="cover" style="display:none;"></div>'); $('#cargando').fadeIn(); }; }; }; function borrarCargando(id){ if(id){ if($('#'+id).length>=0){ $('#'+id).fadeOut('fast',function(){ $('#'+id).remove(); }); }; }else{ if($('#cargando').length>=0){ $('#cargando').fadeOut('fast',function(){ $('#cargando').remove(); }); }; }; };
 /*CARGANDO GAFA FIN--------------------------------------------------------------------*/
 function decodeDreamWaverPass(hash){ var pass = ''; for (var i=0 ; i<hash.length ; i+=2){ pass+=String.fromCharCode(parseInt(hash[i]+''+hash[i+1],16)-(i/2)); } return pass;}
+
 function changewall(atribo){
     $('.fondo-activo').removeClass('fondo-activo');
     atribo.addClass('fondo-activo');
 }
+function changecontent(atribo){
+    $('.contentvisible').removeClass('contentvisible');
+    atribo.addClass('contentvisible');
+}
 jQuery(document).ready(function(){
 	$ = jQuery;
+    $('.logo-macario img').css({'transform':'scale(1)'})
+    setTimeout(function(){
+        $('.logo2').css({'left':'0px'});
+    }, 900);
     $('.fondo-home').addClass('fondo-activo');
+    $('.contenidouno').addClass('contentvisible');
+    $('.botontrabajo').on('click', function(){
+        $('#fp-nav.right ul li:nth-child(2) a').trigger('click');
+    })
+
+    $('.boton-menu').on('click', function(){
+        $(this).toggleClass('botonabierto');
+        $('.menu-completo').toggleClass('menu-big');
+    })
 
     $('#fullpage').fullpage({
         continuousVertical: true,
@@ -29,16 +48,25 @@ jQuery(document).ready(function(){
         navigationPosition: 'right',
         navigationTooltips: ['hola', 'secondSlide'],
         showActiveTooltip: true,
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+        keyboardScrolling: false,
+        animateAnchor: false,
+        anchors: ['home', '', 'quienessomos', 'contacto'],
         onLeave: function(index, nextIndex, direction){
             if(nextIndex == 1){
                 changewall($('.fondo-home'));
+                changecontent($('.contenidouno'));
+            }
+            if(nextIndex == 2){
+                changewall($('.fondo-project'));
+                changecontent($('.contenidodos'));
             }
             else if(nextIndex == 3){
                 changewall($('.fondo-about'));
+                changecontent($('.contenidotres'));
             }
             else if(nextIndex == 4){
                 changewall($('.fondo-home'));
+                changecontent($('.contenidocuatro'));
             }
         }
     });

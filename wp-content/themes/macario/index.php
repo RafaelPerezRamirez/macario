@@ -1,21 +1,15 @@
 <?php get_header();?>
 <div class="fondos">
     <div class="fondo-home"></div>
+    <div class="fondo-project"></div>
     <div class="fondo-projects"></div>
     <div class="fondo-about"></div>
 </div>
-<div class="contenedorinterno">
-    <div class="texto-superior color_blanco monse text-left">
-        <div class="title bolder">
-            Hola!
-        </div>
-        <div class="title bolder">
-            Somos Macario, potenciadores de marcas
-        </div>
-        <div class="small">
-            Creamos experiencias asombrosas
-        </div>
-    </div>
+<div class="contenidointerno">
+    <?php slideuno(); ?>
+    <?php slidedos(); ?>
+    <?php slidetres(); ?>
+    <?php slidecuatro(); ?>
 </div>
 <div id="fullpage">
     <div class="section home"></div>
