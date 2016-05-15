@@ -88,7 +88,7 @@ function slidedos(){
 							<div class="color_azul monse pititulo small lighter">
 								'.$proyecto->Desc_corta.'
 							</div>
-							<a href="'.$proyecto->Permalink.'" class="boton-proyecto color_azul botonaccion monse small text-center">Ver proyecto</a>
+							<a href="'.$proyecto->Permalink.'" data-color="#ffffff" class="boton-proyecto color_azul botonaccion monse small text-center">Ver proyecto</a>
 						</div>
 					</div><!--
 					--><div class="slide-proyectos spleft" style="background-image:url('.$proyecto->Foto_principal.')">
@@ -106,10 +106,10 @@ function slidetres(){
 <div class="contenidotres content">
 	<div class="slide-proyectos azulsection">
 		<div class="texto-superior color_blanco monse text-left lighter">
-			<div class="title shadowtext s1content">
+			<div class="title shadowtext s1content bolder">
 				Somos Macario.
 			</div>
-			<div class="title shadowtext s1content">
+			<div class="title shadowtext s1content bolder">
 				Experiencias creadas a la medida.
 			</div>
 			<div class="small shadowtext s1content s1last lighter">

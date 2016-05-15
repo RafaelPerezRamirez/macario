@@ -31,9 +31,6 @@ img{
 a,[data-link],[data-accion]{
 	<?php compatible( 'transition:1s opacity ease;' );?>
 }
-a:hover,[data-link]:hover,[data-accion]:hover{
-	opacity:0.6;
-}
 .oculto{
 	display:none !important;
 }
@@ -117,8 +114,8 @@ div#aceptar_pregunta_gafa {
 }
 /*CARGANDO*/
 #cargando {
-	background-color: rgba(255,255,255,0.8);
-	background-image: url('<?php plantilla(); ?>/images/carga.gif');
+	background-color: rgba(255,255,255,1);
+	z-index: 100000000000000000000;
 }
 .cover{
 	position: fixed;
@@ -166,10 +163,10 @@ div#aceptar_pregunta_gafa {
 	font-family: 'Montserrat', sans-serif;
 }
 .bolder{
-	font-weight: bolder;
+	font-weight: 800;
 }
 .lighter{
-	font-weight: lighter;
+	font-weight: 100;
 }
 .attach{
 	text-decoration: line-through;
@@ -253,17 +250,20 @@ div#aceptar_pregunta_gafa {
 }
 .s1buton{
 	position: absolute;;
-	bottom: -40%;
+	bottom: -130px;
 }
 img.peace {
     margin-left: 30px;
 }
 .logo-macario{
-	position: absolute;
+	position: fixed;
 	top: 5%;
 	left: 6%;
 	z-index: 1000000000000;
 	cursor: pointer;
+}
+.logo-macario:hover .logo2{
+	left: 4px!important;
 }
 .logo-macario img{
 	<?php compatible( 'transform:scale(1.5);' );?>
@@ -278,6 +278,10 @@ img.peace {
 	z-index: 100000000000000;
 	top: 7%;
 	right: 5.5%;
+	display: none;
+}
+.home .boton-menu{
+	display: block;
 }
 .boton-menu span{
 	width: 85%;
@@ -424,6 +428,10 @@ a.boton-proyecto {
     border: solid 2px #002eff;
     margin-top: 75px;
 }
+a.boton-proyecto:hover{
+	color: white;
+	background: #002eff;
+}
 .cabecera-proyecto-interno {
     width: 100%;
     height: 100vh;
@@ -514,7 +522,7 @@ a.boton-proyecto {
 .slide-animado{
 	background-image: url('<?php plantilla(); ?>/images/animacion.gif');
 	background-size: cover;
-	background-position: center left 25px;
+	background-position: center left 40px;
 }
 .flechas-slider{
 	position: fixed;
@@ -538,6 +546,11 @@ a.boton-proyecto {
 }
 .atras-slider.flecha {
     transform: rotate(-180deg);
+}
+.pititulo {
+    width: 95%;
+    white-space: normal;
+    display: block;
 }
 /*colores--------------------------------------*/
 <?php

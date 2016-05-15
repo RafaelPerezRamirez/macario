@@ -31,6 +31,23 @@ function changeselect(atribo){
 }
 jQuery(document).ready(function(){
 	$ = jQuery;
+    cargando();
+    setTimeout(function() {
+        cargando();
+    }, 1000);
+
+
+    $('a.boton-proyecto').on('click', function(e){
+        e.preventDefault();
+        var newLocation = this.href;
+		cargando();
+        window.setTimeout(function() {
+		    // Redirects to new destination
+				window.location = newLocation;
+		}, 1000);
+    })
+
+
     /*slider*/
     $('.next-slider').addClass('flechaactiva');
     var cantidadslides = $('.proyecto-item').length;
@@ -39,7 +56,7 @@ jQuery(document).ready(function(){
     $('.next-slider').on('click', function(){
         conteo+=1;
         console.log(conteo);
-        contador-=100;
+        contador-=100.5;
         $('.carrete-proyecto').css({'left':contador+'%'});
         if(conteo>1){
             $('.atras-slider').addClass('flechaactiva');
@@ -50,7 +67,7 @@ jQuery(document).ready(function(){
     })
     $('.atras-slider').on('click', function(){
         conteo-=1;
-        contador+=100;
+        contador+=100.5;
         $('.carrete-proyecto').css({'left':contador+'%'});
         if(conteo==1){
             $('.atras-slider').removeClass('flechaactiva');
@@ -60,10 +77,6 @@ jQuery(document).ready(function(){
         }
     })
     /*slider*/
-
-    $('.logo-macario').on('click', function(){
-        $('#fp-nav.right ul li:nth-child(1) a').trigger('click');
-    })
     $('.lm1').on('click', function(){
         $('#fp-nav.right ul li:nth-child(1) a').trigger('click');
         $('.boton-menu').trigger('click');

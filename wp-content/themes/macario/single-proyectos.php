@@ -2,7 +2,6 @@
     get_header();
     global $post;
         $proyecto = new macario\Proyectos($ids);
-        gafa($proyecto);
         echo '
             <div class="proyecto-interno">
                 <div class="cabecera-proyecto-interno" style="background-image:url('.$proyecto->Foto_principal.')">
