@@ -40,7 +40,7 @@ function slideuno(){
 <div class="contenidouno content">
 	<div class="texto-superior color_blanco monse text-left">
 		<div class="title bolder s1title">
-			Hola! <img src="<?php plantilla(); ?>/images/peace.png" class="peace" />
+			Hola! <img src="<?php plantilla(); ?>/images/love.png" class="peace" />
 		</div>
 		<div class="title bolder shadowtext s1content">
 			Somos Macario, potenciadores de marcas

@@ -254,6 +254,7 @@ div#aceptar_pregunta_gafa {
 }
 img.peace {
     margin-left: 30px;
+	width: 33px;
 }
 .logo-macario{
 	position: fixed;

@@ -26,7 +26,7 @@
     <!-- Google Analytics -->
 </head>
 <body <?php body_class("normal");?>>
-<a href="<?php get_home_url(); ?>" class="logo-macario">
+<a href="http://casamacario.mx" class="logo-macario">
     <img src="<?php plantilla(); ?>/images/logo1.png" class="logo1"/>
     <img src="<?php plantilla(); ?>/images/logo2.png" class="logo2"/>
 </a>
