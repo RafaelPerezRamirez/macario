@@ -203,14 +203,14 @@ div#aceptar_pregunta_gafa {
 	opacity: 0;
 	z-index: -1;
 }
-.fondo-home{
+.fondo-home, .azulsection{
 	background-image: url('<?php plantilla(); ?>/images/fondo1.png');
 }
 .fondo-project{
 	background-image: none;
 }
 .fondo-about{
-	background-image: url('<?php plantilla(); ?>/images/fondo2.png');
+	background-image: color;
 }
 .fondo-activo{
 	opacity: 1!important;
@@ -221,11 +221,14 @@ div#aceptar_pregunta_gafa {
 	position: relative;
 	height: 100%;
 }
-.contenidouno, .contenidotres, .contenidocuatro{
+.contenidouno, .contenidocuatro{
     width: 60%;
 	position: absolute;
 	top: 50%;
 	<?php compatible( 'transform: translateY(-50%);' );?>
+}
+.contenidouno{
+	padding-left: 70px;
 }
 .s1last{
 	font-weight: 100;
@@ -259,6 +262,8 @@ img.peace {
 	position: absolute;
 	top: 5%;
 	left: 6%;
+	z-index: 1000000000000;
+	cursor: pointer;
 }
 .logo-macario img{
 	<?php compatible( 'transform:scale(1.5);' );?>
@@ -269,10 +274,10 @@ img.peace {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
-	position: absolute;;
+	position: fixed;
 	z-index: 100000000000000;
 	top: 7%;
-	right: 6%;
+	right: 5.5%;
 }
 .boton-menu span{
 	width: 85%;
@@ -318,7 +323,7 @@ img.logo2 {
 	<?php compatible( 'transition:.4s ease;' );?>
 }
 .contentvisible{
-	left: 6%;
+	left: 0%;
 	opacity: 1;
 	pointer-events: all;
 }
@@ -334,7 +339,7 @@ img.logo2 {
 	width: 50px;
 	border-radius: 100%;
 	height: 50px;
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
@@ -364,6 +369,14 @@ img.logo2 {
 }
 .link-menu:hover{
 	color: #002eff;
+	opacity: 1!important;
+	margin-bottom: 20px;
+}
+.linkselect{
+	color: #002eff;
+}
+.link-menu{
+	display: block;
 }
 .botonabierto .spmenu2{
 	opacity: 0;
@@ -376,12 +389,11 @@ img.logo2 {
 	transform: rotate(-45deg);
 	top: 1px;
 }
-.contenidodos{
+.contenidodos, .contenidotres{
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
-	left: 0;
 }
 .contenidocuatro.content.contentvisible {
     left: 0%!important;
@@ -475,6 +487,57 @@ a.boton-proyecto {
     height: 100vh;
     background-size: cover;
     background-position: center;
+}
+.fp-tooltip.right {
+    display: none!important;
+}
+.proyecto-item {
+    display: inline-block;
+    width: 100%;
+}
+.carrete-proyecto {
+    white-space: nowrap;
+    position: relative;
+    left: 0%;
+	<?php compatible( 'transition:.4s ease;' );?>
+}
+.contenidodos.content.contentvisible {
+    overflow: hidden;
+}
+.slide-proyectos .texto-superior {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+	width: 75%;
+}
+.slide-animado{
+	background-image: url('<?php plantilla(); ?>/images/animacion.gif');
+	background-size: cover;
+	background-position: center left 25px;
+}
+.flechas-slider{
+	position: fixed;
+    bottom: 12%;
+    left: 5%;
+    z-index: 100000000000;
+}
+.flecha {
+    width: 30px;
+    height: 30px;
+	background-image: url('<?php plantilla(); ?>/images/flecha.png');
+	background-position: center;
+    display: inline-block;
+    cursor: pointer;
+	pointer-events: none;
+	opacity: 0.7;
+}
+.flechaactiva{
+	opacity: 1;
+	pointer-events: all!important;
+}
+.atras-slider.flecha {
+    transform: rotate(-180deg);
 }
 /*colores--------------------------------------*/
 <?php

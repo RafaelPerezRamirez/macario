@@ -66,6 +66,14 @@ function slidedos(){
 	));
 ?>
 	<div class="contenidodos content">
+		<div class="flechas-slider">
+			<div class="atras-slider flecha">
+
+			</div>
+			<div class="next-slider flecha">
+
+			</div>
+		</div>
 		<div class="carrete-proyecto">
 			<?php
 			foreach ($IdsAplicaciones as $ids) {
@@ -96,20 +104,23 @@ function slidedos(){
 function slidetres(){
 ?>
 <div class="contenidotres content">
-	<div class="texto-superior color_blanco monse text-left lighter">
-		<div class="title shadowtext s1content">
-			Somos <span class="color_azul">Macario</span>.
+	<div class="slide-proyectos azulsection">
+		<div class="texto-superior color_blanco monse text-left lighter">
+			<div class="title shadowtext s1content">
+				Somos Macario.
+			</div>
+			<div class="title shadowtext s1content">
+				Experiencias creadas a la medida.
+			</div>
+			<div class="small shadowtext s1content s1last lighter">
+				Nos mueven las ideas, sin importar su tamaño.
+			</div>
+			<div class="small botonaccion color_blanco text-center monse s1buton pointer botontrabajo">
+				Nuestro trabajo
+			</div>
 		</div>
-		<div class="title shadowtext s1content">
-			<span class="color_azul">Experiencias</span> creadas <span class="color_azul">a la medida</span>.
-		</div>
-		<div class="small shadowtext s1content s1last lighter">
-			Nos mueven las ideas, sin importar su tamaño.
-		</div>
-		<div class="small botonaccion color_blanco text-center monse s1buton pointer botontrabajo">
-			Nuestro trabajo
-		</div>
-	</div>
+	</div><!--
+	--><div class="slide-proyectos slide-animado"></div>
 </div>
 <?php
 }

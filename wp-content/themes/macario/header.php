@@ -37,14 +37,14 @@
 </div>
 <div class="menu-completo blanco">
     <div class="links-menu color_gris bolder">
-        <div class="pointer titlesp monse link-menu lm1">
+        <a href="#" class="pointer titlesp monse link-menu lm1">
             Si, somos Macario
-        </div>
-        <div class="pointer titlesp monse link-menu lm2">
-            Si, somos Macario
-        </div>
-        <div class="pointer titlesp monse link-menu lm3">
-            Si, somos Macario
-        </div>
+        </a>
+        <a href="#" class="pointer titlesp monse link-menu lm2">
+            Lo que hacemos
+        </a>
+        <a href="#" class="pointer titlesp monse link-menu lm3">
+            Escribenos
+        </a>
     </div>
 </div>

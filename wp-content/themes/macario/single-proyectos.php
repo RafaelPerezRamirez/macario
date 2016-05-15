@@ -1,15 +1,8 @@
 <?php
     get_header();
     global $post;
-    $IdsAplicaciones = get_posts(array(
-		'post_type'     => 'proyectos',
-		'posts_per_page'=> 1,
-		'fields'        => 'ids',
-		'orderby'		=> 'date',
-		'order'			=> 'ASC',
-	));
-    foreach ($IdsAplicaciones as $ids) {
         $proyecto = new macario\Proyectos($ids);
+        gafa($proyecto);
         echo '
             <div class="proyecto-interno">
                 <div class="cabecera-proyecto-interno" style="background-image:url('.$proyecto->Foto_principal.')">
@@ -43,5 +36,4 @@
                 </div>
             </div>
         ';
-    }
 ?>

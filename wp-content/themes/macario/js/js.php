@@ -25,8 +25,57 @@ function changecontent(atribo){
     $('.contentvisible').removeClass('contentvisible');
     atribo.addClass('contentvisible');
 }
+function changeselect(atribo){
+    $('.linkselect').removeClass('linkselect');
+    atribo.addClass('linkselect');
+}
 jQuery(document).ready(function(){
 	$ = jQuery;
+    /*slider*/
+    $('.next-slider').addClass('flechaactiva');
+    var cantidadslides = $('.proyecto-item').length;
+    var conteo = 1;
+    var contador = 0;
+    $('.next-slider').on('click', function(){
+        conteo+=1;
+        console.log(conteo);
+        contador-=100;
+        $('.carrete-proyecto').css({'left':contador+'%'});
+        if(conteo>1){
+            $('.atras-slider').addClass('flechaactiva');
+        }
+        if(conteo==cantidadslides){
+            $('.next-slider').removeClass('flechaactiva');
+        }
+    })
+    $('.atras-slider').on('click', function(){
+        conteo-=1;
+        contador+=100;
+        $('.carrete-proyecto').css({'left':contador+'%'});
+        if(conteo==1){
+            $('.atras-slider').removeClass('flechaactiva');
+        }
+        if(conteo<cantidadslides){
+            $('.next-slider').addClass('flechaactiva');
+        }
+    })
+    /*slider*/
+
+    $('.logo-macario').on('click', function(){
+        $('#fp-nav.right ul li:nth-child(1) a').trigger('click');
+    })
+    $('.lm1').on('click', function(){
+        $('#fp-nav.right ul li:nth-child(1) a').trigger('click');
+        $('.boton-menu').trigger('click');
+    })
+    $('.lm2').on('click', function(){
+        $('#fp-nav.right ul li:nth-child(3) a').trigger('click');
+        $('.boton-menu').trigger('click');
+    })
+    $('.lm3').on('click', function(){
+        $('#fp-nav.right ul li:nth-child(4) a').trigger('click');
+        $('.boton-menu').trigger('click');
+    })
     $('.logo-macario img').css({'transform':'scale(1)'})
     setTimeout(function(){
         $('.logo2').css({'left':'0px'});
@@ -55,6 +104,7 @@ jQuery(document).ready(function(){
             if(nextIndex == 1){
                 changewall($('.fondo-home'));
                 changecontent($('.contenidouno'));
+                changeselect($('.lm1'));
             }
             if(nextIndex == 2){
                 changewall($('.fondo-project'));
@@ -63,10 +113,12 @@ jQuery(document).ready(function(){
             else if(nextIndex == 3){
                 changewall($('.fondo-about'));
                 changecontent($('.contenidotres'));
+                changeselect($('.lm2'));
             }
             else if(nextIndex == 4){
                 changewall($('.fondo-home'));
                 changecontent($('.contenidocuatro'));
+                changeselect($('.lm3'));
             }
         }
     });
