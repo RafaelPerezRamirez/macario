@@ -39,13 +39,13 @@ function slideuno(){
 ?>
 <div class="contenidouno content">
 	<div class="texto-superior color_blanco monse text-left">
-		<div class="title bolder s1title">
-			Hola! <img src="<?php plantilla(); ?>/images/love.png" class="peace" />
+		<div class="title bolder s1title anima1">
+			Hola!
 		</div>
-		<div class="title bolder shadowtext s1content">
+		<div class="title bolder shadowtext s1content anima2">
 			Somos Macario, potenciadores de marcas
 		</div>
-		<div class="small shadowtext s1content s1last lighter">
+		<div class="small shadowtext s1content s1last lighter anima3">
 			Creamos experiencias asombrosas
 		</div>
 		<div class="small botonaccion color_blanco text-center monse s1buton pointer botontrabajo">
@@ -82,13 +82,13 @@ function slidedos(){
 				<div class="proyecto-item">
 					<div class="slide-proyectos spleft">
 						<div class="info-proyecto text-left">
-							<div class="color_azul monse pititulo title bolder">
+							<div class="color_azul monse pititulo title bolder anima1">
 								'.$proyecto->Nombre.'
 							</div>
-							<div class="color_azul monse pititulo small lighter">
+							<div class="color_azul monse pititulo small lighter anima2">
 								'.$proyecto->Desc_corta.'
 							</div>
-							<a href="'.$proyecto->Permalink.'" data-color="#ffffff" class="boton-proyecto color_azul botonaccion monse small text-center">Ver proyecto</a>
+							<a href="'.$proyecto->Permalink.'" data-color="#ffffff" class="boton-proyecto color_azul botonaccion monse small text-center anima3">Ver proyecto</a>
 						</div>
 					</div><!--
 					--><div class="slide-proyectos spleft" style="background-image:url('.$proyecto->Foto_principal.')">
@@ -106,13 +106,13 @@ function slidetres(){
 <div class="contenidotres content">
 	<div class="slide-proyectos azulsection">
 		<div class="texto-superior color_blanco monse text-left lighter">
-			<div class="title shadowtext s1content bolder">
+			<div class="title shadowtext s1content bolder anima1">
 				Somos Macario.
 			</div>
-			<div class="title shadowtext s1content bolder">
+			<div class="title shadowtext s1content bolder anima2">
 				Experiencias creadas a la medida.
 			</div>
-			<div class="small shadowtext s1content s1last lighter">
+			<div class="small shadowtext s1content s1last lighter anima3">
 				Nos mueven las ideas, sin importar su tamaño.
 			</div>
 			<div class="small botonaccion color_blanco text-center monse s1buton pointer botontrabajo">

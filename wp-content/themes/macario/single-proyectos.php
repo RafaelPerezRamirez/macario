@@ -35,4 +35,22 @@
                 </div>
             </div>
         ';
+        $IdsAplicaciones = get_posts(array(
+            'post_type'     => 'proyectos',
+            'posts_per_page'=> 1,
+            'fields'        => 'ids',
+            'orderby'		=> 'rand',
+        ));
+        foreach ($IdsAplicaciones as $ids) {
+            $proyectos = new macario\Proyectos($ids);
+            gafa($proyectos);
+        echo '<div class="footerproyecto">
+            <a href="mailto:hola@casamacario.mx" class="foop azul color_blanco monse lighter small text-center">
+                Mandanos un mail
+            </a><!--
+            --><a href="'.$proyectos->Permalink.'" class="foop color_azul blanco monse lighter small text-center">
+                Siguiente proyecto
+            </a>
+        </div>';
+    }
 ?>

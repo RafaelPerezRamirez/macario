@@ -24,6 +24,16 @@ function changewall(atribo){
 function changecontent(atribo){
     $('.contentvisible').removeClass('contentvisible');
     atribo.addClass('contentvisible');
+    $('.muestranima').removeClass('muestranima');
+    window.setTimeout(function() {
+        $('.anima1').addClass('muestranima');
+    }, 500);
+    window.setTimeout(function() {
+        $('.anima2').addClass('muestranima');
+    }, 650);
+    window.setTimeout(function() {
+        $('.anima3').addClass('muestranima');
+    }, 800);
 }
 function changeselect(atribo){
     $('.linkselect').removeClass('linkselect');
@@ -31,12 +41,15 @@ function changeselect(atribo){
 }
 jQuery(document).ready(function(){
 	$ = jQuery;
-    cargando();
-    setTimeout(function() {
-        cargando();
-    }, 1000);
-
-
+    window.setTimeout(function() {
+        $('.contenidouno .anima1').addClass('muestranima');
+    }, 500);
+    window.setTimeout(function() {
+        $('.contenidouno .anima2').addClass('muestranima');
+    }, 650);
+    window.setTimeout(function() {
+        $('.contenidouno .anima3').addClass('muestranima');
+    }, 800);
     $('a.boton-proyecto').on('click', function(e){
         e.preventDefault();
         var newLocation = this.href;
@@ -46,7 +59,6 @@ jQuery(document).ready(function(){
 				window.location = newLocation;
 		}, 1000);
     })
-
 
     /*slider*/
     $('.next-slider').addClass('flechaactiva');
@@ -118,20 +130,29 @@ jQuery(document).ready(function(){
                 changewall($('.fondo-home'));
                 changecontent($('.contenidouno'));
                 changeselect($('.lm1'));
+                $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo1.png")'});
+                $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo2.png")'});
             }
             if(nextIndex == 2){
                 changewall($('.fondo-project'));
                 changecontent($('.contenidodos'));
+                $('.boton-menu').removeClass('botoncolor');
+                $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo1a.png")'});
+                $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo2a.png")'});
             }
             else if(nextIndex == 3){
                 changewall($('.fondo-about'));
                 changecontent($('.contenidotres'));
                 changeselect($('.lm2'));
+                $('.boton-menu').addClass('botoncolor');
+                $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo1.png")'});
+                $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo2.png")'});
             }
             else if(nextIndex == 4){
                 changewall($('.fondo-home'));
                 changecontent($('.contenidocuatro'));
                 changeselect($('.lm3'));
+                $('.boton-menu').removeClass('botoncolor');
             }
         }
     });

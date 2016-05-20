@@ -27,14 +27,15 @@
 </head>
 <body <?php body_class("normal");?>>
 <a href="http://casamacario.mx" class="logo-macario">
-    <img src="<?php plantilla(); ?>/images/logo1.png" class="logo1"/>
-    <img src="<?php plantilla(); ?>/images/logo2.png" class="logo2"/>
+    <div class="logo1"></div>
+    <div class="logo2"></div>
 </a>
 <div class="boton-menu">
     <span class="spmenu1"></span>
     <span class="spmenu2"></span>
     <span class="spmenu3"></span>
 </div>
+<a href="http://instagram.com" class="instaicon"></a>
 <div class="menu-completo blanco">
     <div class="links-menu color_gris bolder">
         <a href="#" class="pointer titlesp monse link-menu lm1">

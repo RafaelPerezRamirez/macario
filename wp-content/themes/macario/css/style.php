@@ -201,7 +201,10 @@ div#aceptar_pregunta_gafa {
 	z-index: -1;
 }
 .fondo-home, .azulsection{
+	background-color: #002eff;
 	background-image: url('<?php plantilla(); ?>/images/fondo1.png');
+	background-repeat: repeat;
+	background-position: top -25px left -15px;
 }
 .fondo-project{
 	background-image: none;
@@ -242,7 +245,7 @@ div#aceptar_pregunta_gafa {
     width: 260px;
     line-height: 45px;
     border-radius: 45px;
-	<?php compatible( 'transition:.4s ease;' );?>
+	<?php compatible( 'transition:1.75s ease;' );?>
 }
 .botonaccion:hover{
 	background: white;
@@ -250,16 +253,42 @@ div#aceptar_pregunta_gafa {
 }
 .s1buton{
 	position: absolute;;
-	bottom: -130px;
+	left: -500px;
+}
+.contentvisible .s1buton{
+	left: 0px;
+}
+.contenidouno .s1buton{
+	margin-left: 70px;
 }
 img.peace {
     margin-left: 30px;
 	width: 33px;
 }
+.logo1 {
+    position: relative;
+    top: 1px;
+	background-image: url('<?php plantilla(); ?>/images/logo1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.logo2 {
+    position: relative;
+    top: -10px;
+    left: 4px;
+	background-image: url('<?php plantilla(); ?>/images/logo2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.logo-macario div{
+	width: 57px;
+	height: 39px;
+	<?php compatible( 'transition:.4s ease;' );?>
+}
 .logo-macario{
 	position: fixed;
 	top: 5%;
-	left: 6%;
+	left: 4.7%;
 	z-index: 1000000000000;
 	cursor: pointer;
 }
@@ -278,7 +307,7 @@ img.peace {
 	position: fixed;
 	z-index: 100000000000000;
 	top: 7%;
-	right: 5.5%;
+	right: 5.8%;
 	display: none;
 }
 .home .boton-menu{
@@ -302,15 +331,6 @@ img.peace {
 .spmenu3{
 	top: 12px;
 }
-img.logo1 {
-    position: relative;
-    top: 1px;
-}
-img.logo2 {
-    position: relative;
-    top: -9px;
-    left: 4px;
-}
 #fp-nav.right {
     right: 90px!important;
 	z-index: 100000000000000!important;
@@ -325,7 +345,7 @@ img.logo2 {
 	pointer-events: none;
 	left: -20%;
 	opacity: 0;
-	<?php compatible( 'transition:.4s ease;' );?>
+	<?php compatible( 'transition:.7s ease;' );?>
 }
 .contentvisible{
 	left: 0%;
@@ -339,6 +359,16 @@ img.logo2 {
 	display: block;
 	margin: 0 auto;
 	margin-top: 50px;
+	position: relative;
+	top: 0px;
+	left: -700px;
+}
+.contentvisible .boton-envia{
+	left: 0px;
+}
+.boton-envia:hover{
+	color: white;
+	background: transparent!important;
 }
 .menu-completo{
 	width: 50px;
@@ -552,6 +582,48 @@ a.boton-proyecto:hover{
     width: 95%;
     white-space: normal;
     display: block;
+}
+.foop{
+	display: inline-block;
+	width: 50%;
+	line-height: 230px;
+}
+div#fp-nav ul li:nth-child(2) a span, div#fp-nav ul li:nth-child(4) a span{
+	background-image: url('<?php plantilla(); ?>/images/triangle.png')!important;
+	background-color: transparent!important;
+	background-size: cover!important;
+	border-radius: 0%!important;
+	width: 11px!important;
+	height: 11px!important;
+	background-repeat: no-repeat;
+	left: 5px!important;
+}
+#fp-nav ul li:nth-child(2) a.active span, #fp-nav ul li:nth-child(4) a.active span{
+	left: 5px!important;
+	width: 16px!important;
+	height: 16px!important;
+}
+.instaicon{
+	width: 25px;
+	height: 25px;
+	position: fixed;
+	z-index: 100000000000000;
+	bottom: 14%;
+	right: 5.7%;
+	background-image: url('<?php plantilla(); ?>/images/insta.png');
+}
+.botoncolor span{
+	background: #002eff;
+}
+.anima1, .anima2, .anima3{
+	position: relative;
+	opacity: 0;
+	left: -20px;
+	<?php compatible( 'transition:.3s ease;' );?>
+}
+.muestranima{
+	opacity: 1;
+	left: 0px;
 }
 /*colores--------------------------------------*/
 <?php
