@@ -41,6 +41,9 @@ function changeselect(atribo){
 }
 jQuery(document).ready(function(){
 	$ = jQuery;
+    window.setTimeout(function() {
+        $('#fp-nav ul li a span').addClass('spanblanco');
+    }, 10);
     $('.lm2').addClass('linkselect');
     window.setTimeout(function() {
         $('.contenidouno .anima1').addClass('muestranima');
@@ -73,6 +76,7 @@ jQuery(document).ready(function(){
         setTimeout(function(){
             $('.anima1').addClass('muestranima');
             $('.anima2').addClass('muestranima');
+            $('.anima3').addClass('muestranima');
             $('.foto-slide').addClass('foto-svisible');
         }, 700);
         setTimeout(function(){
@@ -95,6 +99,7 @@ jQuery(document).ready(function(){
         setTimeout(function(){
             $('.anima1').addClass('muestranima');
             $('.anima2').addClass('muestranima');
+            $('.anima3').addClass('muestranima');
         }, 900);
         setTimeout(function(){
             $('.foto-slide').addClass('foto-svisible');
@@ -138,6 +143,7 @@ jQuery(document).ready(function(){
         window.setTimeout(function() {
             $('.links-menu').toggleClass('links-activos');
         }, 100);
+        $('.instaicon').toggleClass('instaicon2');
     })
 
     $('#fullpage').fullpage({
@@ -158,6 +164,10 @@ jQuery(document).ready(function(){
                 $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo1.png")'});
                 $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo2.png")'});
                 $('.foto-slide').removeClass('foto-svisible');
+                $('.instaicon').removeClass('instaicon2');
+                $('.spanblanco').removeClass('spanazul');
+                $('#fp-nav ul li a span').removeClass('spanazul');
+                $('#fp-nav ul li a span').addClass('spanblanco');
             }
             if(nextIndex == 2){
                 changewall($('.fondo-project'));
@@ -168,8 +178,12 @@ jQuery(document).ready(function(){
                 window.setTimeout(function() {
                     $('.foto-slide').addClass('foto-svisible');
                 }, 600);
+                $('.instaicon').addClass('instaicon2');
+                $('.spanblanco').removeClass('spanblanco');
+                $('#fp-nav ul li a span').addClass('spanazul');
             }
             else if(nextIndex == 3){
+                $('.instaicon').addClass('instaicon2');
                 changewall($('.fondo-about'));
                 changecontent($('.contenidotres'));
                 changeselect($('.lm1'));
@@ -177,12 +191,18 @@ jQuery(document).ready(function(){
                 $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo1.png")'});
                 $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo2.png")'});
                 $('.foto-slide').removeClass('foto-svisible');
+                $('.spanblanco').removeClass('spanblanco');
+                $('#fp-nav ul li a span').addClass('spanazul');
             }
             else if(nextIndex == 4){
                 changewall($('.fondo-home'));
                 changecontent($('.contenidocuatro'));
                 changeselect($('.lm3'));
                 $('.boton-menu').removeClass('botoncolor');
+                $('.instaicon').removeClass('instaicon2');
+                $('.spanblanco').removeClass('spanazul');
+                $('#fp-nav ul li a span').addClass('spanblanco');
+                $('#fp-nav ul li a span').removeClass('spanazul');
             }
         }
     });

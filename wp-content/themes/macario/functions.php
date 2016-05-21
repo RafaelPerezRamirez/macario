@@ -128,7 +128,7 @@ function slidecuatro(){
 		<div class="monse color_blanco text-center title bolder">
 			¡Mandanos un mail!
 		</div>
-		<a href="mailto:hola@casamacario.mx" class="boton-envia blanco text-center color_azul monse small botonaccion">hola@casamacario.mx</a>
+		<a href="mailto:contacto@casamacario.mx" class="boton-envia blanco text-center color_azul monse small botonaccion">contacto@casamacario.mx</a>
 	</div>
 <?php
 }

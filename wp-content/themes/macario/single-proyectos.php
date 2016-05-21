@@ -44,7 +44,7 @@
         foreach ($IdsAplicaciones as $ids) {
             $proyectos = new macario\Proyectos($ids);
         echo '<div class="footerproyecto">
-            <a href="mailto:hola@casamacario.mx" class="foop azul color_blanco monse lighter small text-center">
+            <a href="mailto:contacto@casamacario.mx" class="foop azul color_blanco monse lighter small text-center">
                 Mandanos un mail
             </a><!--
             --><a href="'.$proyectos->Permalink.'" class="foop color_azul blanco monse lighter small text-center">

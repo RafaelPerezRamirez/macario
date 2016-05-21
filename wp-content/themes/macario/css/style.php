@@ -332,10 +332,14 @@ img.peace {
 }
 #fp-nav.right {
     right: 90px!important;
-	z-index: 100000000000000!important;
+	z-index: 1000000!important;
 }
-#fp-nav ul li a span{
-	background: white!important;
+.spanblanco{
+	background-color: white!important;
+}
+.spanazul{
+	background-color: #002eff!important;
+	background-image: url('<?php plantilla(); ?>/images/triangle2.png')!important;
 }
 #fp-nav ul li, .fp-slidesNav ul li{
 	margin: 29px 0px!important;
@@ -464,9 +468,10 @@ img.peace {
     background-position: center;
 }
 .info-proyecto.text-left {
+	width: 50%;
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 5%;
 	<?php compatible( 'transform: translateY(-50%);' );?>
 }
 a.boton-proyecto {
@@ -566,9 +571,9 @@ a.boton-proyecto:hover{
 	width: 75%;
 }
 .slide-animado{
-	background-image: url('<?php plantilla(); ?>/images/animacion.gif');
+	background-image: url('<?php plantilla(); ?>/images/gifabout2.gif');
 	background-size: cover;
-	background-position: center left 40px;
+	background-position: center left -10px;
 }
 .flechas-slider{
 	position: fixed;
@@ -579,12 +584,16 @@ a.boton-proyecto:hover{
 .flecha {
     width: 30px;
     height: 30px;
-	background-image: url('<?php plantilla(); ?>/images/flecha.png');
+	background-image: url('<?php plantilla(); ?>/images/flecha3.png');
 	background-position: center;
     display: inline-block;
     cursor: pointer;
 	pointer-events: none;
 	opacity: 0.7;
+	<?php compatible( 'transition:.3s ease-out;' );?>
+}
+.flecha:hover{
+	background-image: url('<?php plantilla(); ?>/images/flecha5.png');
 }
 .flechaactiva{
 	opacity: 1;
@@ -603,20 +612,23 @@ a.boton-proyecto:hover{
 	width: 50%;
 	line-height: 230px;
 }
+div#fp-nav ul li:nth-child(1) a span, div#fp-nav ul li:nth-child(3) a span{
+	background-image: none!important;
+}
 div#fp-nav ul li:nth-child(2) a span, div#fp-nav ul li:nth-child(4) a span{
-	background-image: url('<?php plantilla(); ?>/images/triangle.png')!important;
+	background-image: url('<?php plantilla(); ?>/images/triangle.png');
 	background-color: transparent!important;
 	background-size: cover!important;
 	border-radius: 0%!important;
-	width: 11px!important;
-	height: 11px!important;
+	width: 6px!important;
+	height: 6px!important;
 	background-repeat: no-repeat;
 	left: 5px!important;
 }
 #fp-nav ul li:nth-child(2) a.active span, #fp-nav ul li:nth-child(4) a.active span{
-	left: 5px!important;
-	width: 16px!important;
-	height: 16px!important;
+	left: 10px!important;
+	width: 8px!important;
+	height: 8px!important;
 }
 .instaicon{
 	width: 25px;
@@ -626,6 +638,9 @@ div#fp-nav ul li:nth-child(2) a span, div#fp-nav ul li:nth-child(4) a span{
 	bottom: 14%;
 	right: 5.7%;
 	background-image: url('<?php plantilla(); ?>/images/insta.png');
+}
+.instaicon2{
+	background-image: url('<?php plantilla(); ?>/images/insta2.png')!important;
 }
 .botoncolor span{
 	background: #002eff;
@@ -655,6 +670,17 @@ div#fp-nav ul li:nth-child(2) a span, div#fp-nav ul li:nth-child(4) a span{
 .foto-svisible{
 	opacity: 1;
 	top: 50%;
+}
+.links-menu.color_gris.bolder.links-activos {
+    text-align: right;
+}
+.links-menu .link-menu {
+    line-height: 156px;
+}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{
+	width: 8px!important;
+	height: 8px!important;
+	left: 59%;
 }
 /*colores--------------------------------------*/
 <?php
