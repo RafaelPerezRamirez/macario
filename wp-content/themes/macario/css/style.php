@@ -265,18 +265,24 @@ img.peace {
     margin-left: 30px;
 	width: 33px;
 }
+.home .logo1{
+	background-image: url('<?php plantilla(); ?>/images/logo1.png');
+}
 .logo1 {
     position: relative;
     top: 1px;
-	background-image: url('<?php plantilla(); ?>/images/logo1.png');
+	background-image: url('<?php plantilla(); ?>/images/logo1a.png');
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+.home .logo2{
+	background-image: url('<?php plantilla(); ?>/images/logo2.png');
 }
 .logo2 {
     position: relative;
     top: -10px;
     left: 4px;
-	background-image: url('<?php plantilla(); ?>/images/logo2.png');
+	background-image: url('<?php plantilla(); ?>/images/logo2a.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -284,13 +290,6 @@ img.peace {
 	width: 57px;
 	height: 39px;
 	<?php compatible( 'transition:.4s ease;' );?>
-}
-.logo-macario{
-	position: fixed;
-	top: 5%;
-	left: 4.7%;
-	z-index: 1000000000000;
-	cursor: pointer;
 }
 .logo-macario:hover .logo2{
 	left: 4px!important;
@@ -375,29 +374,42 @@ img.peace {
 	border-radius: 100%;
 	height: 50px;
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	z-index: 1000000;
+	top: 3%;
+	right: 5%;
+	z-index: 1000000000;
 	opacity: 0;
 	pointer-events: none;
-	<?php compatible( 'transition:.3s ease-out;' );?>
+	<?php compatible( 'transition:.5s ease-out;' );?>
+}
+.logo-macario{
+	position: fixed;
+	top: 5%;
+	left: 4.7%;
+	z-index: 1000000000;
+	cursor: pointer;
 }
 .menu-big{
 	opacity: 1;
 	pointer-events: all;
-	width: 2500px!important;
-	height: 2500px!important;
-	border-radius: 0%!important;
+	transform: scale(75);
 }
 .botonabierto span{
 	background: #002eff;
 }
 .links-menu {
     position: absolute;
+	<?php compatible( 'transition:.2s ease-out;' );?>
     top: 49%;
 	<?php compatible( 'transform: translateY(-50%);' );?>
-    right: 25%;
+    right: 10%;
+	z-index: 9000000000;
+	opacity: 0;
+	pointer-events: none;
+}
+.links-activos{
+	opacity: 1;
+	right: 6%;
+	pointer-events: all;
 }
 .links-menu .link-menu{
 	<?php compatible( 'transition:.3s ease-out;' );?>
@@ -434,11 +446,14 @@ img.peace {
     left: 0%!important;
 }
 .slide-proyectos{
-	width: 50%;
+	width: 100%;
 	height: 100vh;
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
+}
+.contenidotres .slide-proyectos{
+	width: 50%!important;
 }
 .slide-proyectos.spleft {
     background-size: cover;
@@ -538,7 +553,7 @@ a.boton-proyecto:hover{
     white-space: nowrap;
     position: relative;
     left: 0%;
-	<?php compatible( 'transition:.4s ease;' );?>
+	<?php compatible( 'transition:1.2s ease;' );?>
 }
 .contenidodos.content.contentvisible {
     overflow: hidden;
@@ -624,6 +639,22 @@ div#fp-nav ul li:nth-child(2) a span, div#fp-nav ul li:nth-child(4) a span{
 .muestranima{
 	opacity: 1;
 	left: 0px;
+}
+.foto-slide {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+	background-position: center;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 20%;
+	opacity: 0;
+	<?php compatible( 'transition:.3s ease-out;' );?>
+}
+.foto-svisible{
+	opacity: 1;
+	top: 50%;
 }
 /*colores--------------------------------------*/
 <?php

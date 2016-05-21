@@ -36,16 +36,17 @@
     <span class="spmenu3"></span>
 </div>
 <a href="http://instagram.com" class="instaicon"></a>
+
+<div class="links-menu color_gris bolder">
+    <a href="#" class="pointer titlesp monse link-menu lm1">
+        Si, somos Macario
+    </a>
+    <a href="#" class="pointer titlesp monse link-menu lm2">
+        Lo que hacemos
+    </a>
+    <a href="#" class="pointer titlesp monse link-menu lm3">
+        Escribenos
+    </a>
+</div>
 <div class="menu-completo blanco">
-    <div class="links-menu color_gris bolder">
-        <a href="#" class="pointer titlesp monse link-menu lm1">
-            Si, somos Macario
-        </a>
-        <a href="#" class="pointer titlesp monse link-menu lm2">
-            Lo que hacemos
-        </a>
-        <a href="#" class="pointer titlesp monse link-menu lm3">
-            Escribenos
-        </a>
-    </div>
 </div>

@@ -41,6 +41,7 @@ function changeselect(atribo){
 }
 jQuery(document).ready(function(){
 	$ = jQuery;
+    $('.lm2').addClass('linkselect');
     window.setTimeout(function() {
         $('.contenidouno .anima1').addClass('muestranima');
     }, 500);
@@ -65,7 +66,18 @@ jQuery(document).ready(function(){
     var cantidadslides = $('.proyecto-item').length;
     var conteo = 1;
     var contador = 0;
+
     $('.next-slider').on('click', function(){
+        $('.muestranima').removeClass('muestranima');
+        $('.foto-svisible').removeClass('foto-svisible');
+        setTimeout(function(){
+            $('.anima1').addClass('muestranima');
+            $('.anima2').addClass('muestranima');
+            $('.foto-slide').addClass('foto-svisible');
+        }, 700);
+        setTimeout(function(){
+            $('.foto-slide').addClass('foto-svisible');
+        }, 900);
         conteo+=1;
         console.log(conteo);
         contador-=100.5;
@@ -78,6 +90,15 @@ jQuery(document).ready(function(){
         }
     })
     $('.atras-slider').on('click', function(){
+        $('.muestranima').removeClass('muestranima');
+        $('.foto-svisible').removeClass('foto-svisible');
+        setTimeout(function(){
+            $('.anima1').addClass('muestranima');
+            $('.anima2').addClass('muestranima');
+        }, 900);
+        setTimeout(function(){
+            $('.foto-slide').addClass('foto-svisible');
+        }, 1100);
         conteo-=1;
         contador+=100.5;
         $('.carrete-proyecto').css({'left':contador+'%'});
@@ -90,11 +111,11 @@ jQuery(document).ready(function(){
     })
     /*slider*/
     $('.lm1').on('click', function(){
-        $('#fp-nav.right ul li:nth-child(1) a').trigger('click');
+        $('#fp-nav.right ul li:nth-child(3) a').trigger('click');
         $('.boton-menu').trigger('click');
     })
     $('.lm2').on('click', function(){
-        $('#fp-nav.right ul li:nth-child(3) a').trigger('click');
+        $('#fp-nav.right ul li:nth-child(1) a').trigger('click');
         $('.boton-menu').trigger('click');
     })
     $('.lm3').on('click', function(){
@@ -114,6 +135,9 @@ jQuery(document).ready(function(){
     $('.boton-menu').on('click', function(){
         $(this).toggleClass('botonabierto');
         $('.menu-completo').toggleClass('menu-big');
+        window.setTimeout(function() {
+            $('.links-menu').toggleClass('links-activos');
+        }, 100);
     })
 
     $('#fullpage').fullpage({
@@ -129,24 +153,30 @@ jQuery(document).ready(function(){
             if(nextIndex == 1){
                 changewall($('.fondo-home'));
                 changecontent($('.contenidouno'));
-                changeselect($('.lm1'));
+                changeselect($('.lm2'));
+                $('.boton-menu').removeClass('botoncolor');
                 $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo1.png")'});
                 $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo2.png")'});
+                $('.foto-slide').removeClass('foto-svisible');
             }
             if(nextIndex == 2){
                 changewall($('.fondo-project'));
                 changecontent($('.contenidodos'));
-                $('.boton-menu').removeClass('botoncolor');
+                $('.boton-menu').addClass('botoncolor');
                 $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo1a.png")'});
                 $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo2a.png")'});
+                window.setTimeout(function() {
+                    $('.foto-slide').addClass('foto-svisible');
+                }, 600);
             }
             else if(nextIndex == 3){
                 changewall($('.fondo-about'));
                 changecontent($('.contenidotres'));
-                changeselect($('.lm2'));
+                changeselect($('.lm1'));
                 $('.boton-menu').addClass('botoncolor');
                 $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo1.png")'});
                 $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logo2.png")'});
+                $('.foto-slide').removeClass('foto-svisible');
             }
             else if(nextIndex == 4){
                 changewall($('.fondo-home'));

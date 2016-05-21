@@ -43,7 +43,6 @@
         ));
         foreach ($IdsAplicaciones as $ids) {
             $proyectos = new macario\Proyectos($ids);
-            gafa($proyectos);
         echo '<div class="footerproyecto">
             <a href="mailto:hola@casamacario.mx" class="foop azul color_blanco monse lighter small text-center">
                 Mandanos un mail

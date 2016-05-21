@@ -79,8 +79,9 @@ function slidedos(){
 			foreach ($IdsAplicaciones as $ids) {
 				$proyecto = new macario\Proyectos($ids);
 				echo'
-				<div class="proyecto-item">
+				<div class="proyecto-item" >
 					<div class="slide-proyectos spleft">
+					<div class="foto-slide" style="background-image:url('.$proyecto->Foto_principal.')"></div>
 						<div class="info-proyecto text-left">
 							<div class="color_azul monse pititulo title bolder anima1">
 								'.$proyecto->Nombre.'
@@ -90,9 +91,6 @@ function slidedos(){
 							</div>
 							<a href="'.$proyecto->Permalink.'" data-color="#ffffff" class="boton-proyecto color_azul botonaccion monse small text-center anima3">Ver proyecto</a>
 						</div>
-					</div><!--
-					--><div class="slide-proyectos spleft" style="background-image:url('.$proyecto->Foto_principal.')">
-
 					</div>
 				</div>';
 			}
