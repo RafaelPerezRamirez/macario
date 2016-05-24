@@ -248,11 +248,12 @@ div#aceptar_pregunta_gafa {
     width: 290px;
     line-height: 45px;
     border-radius: 45px;
-	<?php compatible( 'transition:1.75s ease;' );?>
+	<?php compatible( 'transition:1s ease;' );?>
 }
 .botonaccion:hover{
 	background: white;
 	color: #002eff;
+	transform: scale(1.03);
 }
 .s1buton{
 	position: absolute;;
@@ -269,24 +270,24 @@ img.peace {
 	width: 33px;
 }
 .home .logo1{
-	background-image: url('<?php plantilla(); ?>/images/logo1.png');
+	background-image: url('<?php plantilla(); ?>/images/logos1.png');
 }
 .logo1 {
     position: relative;
     top: 1px;
-	background-image: url('<?php plantilla(); ?>/images/logo1a.png');
+	background-image: url('<?php plantilla(); ?>/images/logos1a.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 .home .logo2{
-	background-image: url('<?php plantilla(); ?>/images/logo2.png');
+	background-image: url('<?php plantilla(); ?>/images/logos2.png');
 }
 .logo2 {
 	height: 49px!important;
     position: relative;
     top: -39px;
     left: 4px;
-	background-image: url('<?php plantilla(); ?>/images/logo2a.png');
+	background-image: url('<?php plantilla(); ?>/images/logos2a.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -368,7 +369,7 @@ img.peace {
 	margin-top: 50px;
 	position: relative;
 	top: 0px;
-	left: -700px;
+	left: -300px;
 }
 .contentvisible .boton-envia{
 	left: 0px;
@@ -407,7 +408,7 @@ img.peace {
 .links-menu {
     position: absolute;
 	<?php compatible( 'transition:.2s ease-out;' );?>
-    top: 49%;
+    top: 44%;
 	<?php compatible( 'transform: translateY(-50%);' );?>
     right: 10%;
 	z-index: 9000000000;
@@ -425,7 +426,6 @@ img.peace {
 .link-menu:hover{
 	color: #002eff;
 	opacity: 1!important;
-	margin-bottom: 20px;
 }
 .linkselect{
 	color: #002eff;
@@ -514,6 +514,8 @@ a.boton-proyecto:hover{
     position: relative;
 }
 .textocintillo {
+	line-height: 43px;
+	letter-spacing: 1px;
     position: relative;
     top: 50%;
     width: 60%;
@@ -577,7 +579,7 @@ a.boton-proyecto:hover{
 .slide-animado{
 	background-image: url('<?php plantilla(); ?>/images/gifabout2.gif');
 	background-size: cover;
-	background-position: center left -35px;
+	background-position: center left -27px;
 }
 .flechas-slider{
 	position: fixed;
@@ -586,8 +588,8 @@ a.boton-proyecto:hover{
     z-index: 100000000000;
 }
 .flecha {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 	background-image: url('<?php plantilla(); ?>/images/flecha3.png');
 	background-position: center;
     display: inline-block;
@@ -709,6 +711,20 @@ div#fp-nav ul li:nth-child(2) a:hover span, div#fp-nav ul li:nth-child(4) a:hove
 #fp-nav{
 	opacity: 0;
 	pointer-events: none;
+}
+.single-proyectos .instaicon{
+	background-image: url('<?php plantilla(); ?>/images/insta2.png')!important;
+}
+.foop{
+	<?php compatible( 'transition:.3s ease-out;' );?>
+}
+.fopuno:hover{
+	color: #002eff;
+	background: white;
+}
+.fopdos:hover{
+	color: white;
+	background: #002eff;
 }
 /*colores--------------------------------------*/
 <?php

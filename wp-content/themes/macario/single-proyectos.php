@@ -4,15 +4,7 @@
         $proyecto = new macario\Proyectos($ids);
         echo '
             <div class="proyecto-interno">
-                <div class="cabecera-proyecto-interno" style="background-image:url('.$proyecto->Foto_principal.')">
-                    <div class="info-proyecto-interno">
-                        <div class="normal color_azul monse titulo-proyectointerno bolder">
-                            '.$proyecto->Nombre.'
-                        </div>
-                        <div class="small color_azul monse subti-proyectointerno lighter">
-                            '.$proyecto->Desc_corta.'
-                        </div>
-                    </div>
+                <div class="cabecera-proyecto-interno" style="background-image:url('.$proyecto->Foto_principal_interna.')">
                 </div>
                 <div class="cintillo-interno">
                     <div class="cintillos cintilloleft">
@@ -44,10 +36,10 @@
         foreach ($IdsAplicaciones as $ids) {
             $proyectos = new macario\Proyectos($ids);
         echo '<div class="footerproyecto">
-            <a href="mailto:contacto@casamacario.mx" class="foop azul color_blanco monse lighter small text-center">
+            <a href="mailto:contacto@casamacario.mx" class="foop azul color_blanco monse lighter small text-center fopuno">
                 Mandanos un mail
             </a><!--
-            --><a href="'.$proyectos->Permalink.'" class="foop color_azul blanco monse lighter small text-center">
+            --><a href="'.$proyectos->Permalink.'" class="foop color_azul blanco monse lighter small text-center fopdos">
                 Siguiente proyecto
             </a>
         </div>';
