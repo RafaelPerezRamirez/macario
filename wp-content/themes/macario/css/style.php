@@ -253,7 +253,11 @@ div#aceptar_pregunta_gafa {
 .botonaccion:hover{
 	background: white;
 	color: #002eff;
+}
+.boton-envia:hover{
 	transform: scale(1.03);
+	background: white!important;
+	color: #002eff!important;
 }
 .s1buton{
 	position: absolute;;
@@ -311,8 +315,10 @@ img.peace {
 	position: fixed;
 	z-index: 100000000000000;
 	top: 7%;
-	right: 5.8%;
-	display: none;
+	right: 90px;
+}
+.single-proyectos .boton-menu span{
+	background: #002eff;
 }
 .home .boton-menu{
 	display: block;
@@ -370,13 +376,15 @@ img.peace {
 	position: relative;
 	top: 0px;
 	left: -300px;
+	letter-spacing: 1px;
+    border: solid 2px white;
+    width: 290px;
+    line-height: 45px;
+    border-radius: 45px;
+	<?php compatible( 'transition:1s ease;' );?>
 }
 .contentvisible .boton-envia{
 	left: 0px;
-}
-.boton-envia:hover{
-	color: white;
-	background: transparent!important;
 }
 .menu-completo{
 	width: 50px;
@@ -406,9 +414,9 @@ img.peace {
 	background: #002eff;
 }
 .links-menu {
-    position: absolute;
+    position: fixed;
 	<?php compatible( 'transition:.2s ease-out;' );?>
-    top: 44%;
+    top: 50%;
 	<?php compatible( 'transform: translateY(-50%);' );?>
     right: 10%;
 	z-index: 9000000000;
@@ -514,7 +522,7 @@ a.boton-proyecto:hover{
     position: relative;
 }
 .textocintillo {
-	line-height: 43px;
+	line-height: 35px;
 	letter-spacing: 1px;
     position: relative;
     top: 50%;
@@ -564,7 +572,7 @@ a.boton-proyecto:hover{
     white-space: nowrap;
     position: relative;
     left: 0%;
-	<?php compatible( 'transition:1.2s ease;' );?>
+	<?php compatible( 'transition:1.2s ease-in-out;' );?>
 }
 .contenidodos.content.contentvisible {
     overflow: hidden;
@@ -588,8 +596,9 @@ a.boton-proyecto:hover{
     z-index: 100000000000;
 }
 .flecha {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+	background-size: cover;
 	background-image: url('<?php plantilla(); ?>/images/flecha3.png');
 	background-position: center;
     display: inline-block;
@@ -646,9 +655,9 @@ div#fp-nav ul li:nth-child(2) a:hover span, div#fp-nav ul li:nth-child(4) a:hove
 	width: 25px;
 	height: 25px;
 	position: fixed;
-	z-index: 100000000000000;
+	z-index: 10000000000000000;
 	bottom: 14%;
-	right: 5.7%;
+	right: 90px;
 	<?php compatible( 'transition:.3s ease;' );?>
 	background-image: url('<?php plantilla(); ?>/images/insta.png');
 }
@@ -657,7 +666,10 @@ div#fp-nav ul li:nth-child(2) a:hover span, div#fp-nav ul li:nth-child(4) a:hove
 	height: 28px;
 }
 .instaicon2{
-	background-image: url('<?php plantilla(); ?>/images/insta2.png')!important;
+	background-image: url('<?php plantilla(); ?>/images/instas2.png')!important;
+}
+.instaicon3{
+	background-image: url('<?php plantilla(); ?>/images/instas2.png')!important;
 }
 .botoncolor span{
 	background: #002eff;

@@ -101,7 +101,7 @@ function slidedos(){
 }
 function slidetres(){
 ?>
-<div class="contenidotres content">
+<div class="contenidotres content" id="contenidotres">
 	<div class="slide-proyectos azulsection">
 		<div class="texto-superior color_blanco monse text-left lighter">
 			<div class="title shadowtext s1content bolder anima1">
@@ -128,7 +128,7 @@ function slidecuatro(){
 		<div class="monse color_blanco text-center title bolder">
 			¡Mandanos un mail!
 		</div>
-		<a href="mailto:contacto@casamacario.mx" class="boton-envia blanco text-center color_azul monse small botonaccion">contacto@casamacario.mx</a>
+		<a href="mailto:contacto@casamacario.mx" class="boton-envia blanco text-center color_azul monse small">contacto@casamacario.mx</a>
 	</div>
 <?php
 }

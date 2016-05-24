@@ -26,7 +26,7 @@
     <!-- Google Analytics -->
 </head>
 <body <?php body_class("normal");?>>
-<a href="http://casamacario.mx" class="logo-macario animainicio">
+<a href="<?php echo get_home_url(); ?>" class="logo-macario animainicio">
     <div class="logo1"></div>
     <div class="logo2"></div>
 </a>
@@ -38,15 +38,28 @@
 <a target="_blank" href="https://www.instagram.com/macariocasacreativa/" class="instaicon animainicio"></a>
 
 <div class="links-menu color_gris bolder">
-    <a href="#" class="pointer titlesp monse link-menu lm1">
-        Si, somos Macario
-    </a>
-    <a href="#" class="pointer titlesp monse link-menu lm2">
-        Lo que hacemos
-    </a>
-    <a href="#" class="pointer titlesp monse link-menu lm3">
-        Escribenos
-    </a>
+    <?php if(is_home()){
+        echo '<a href="#" class="pointer titlesp monse link-menu lm1">
+            Si, somos Macario
+        </a>
+        <a href="#" class="pointer titlesp monse link-menu lm2">
+            Lo que hacemos
+        </a>
+        <a href="#" class="pointer titlesp monse link-menu lm3">
+            Escribenos
+        </a>';
+    }else{
+        echo '<a href="'.get_home_url().'/#quienessomos" class="pointer titlesp monse link-menu">
+            Si, somos Macario
+        </a>
+        <a href="'.get_home_url().'/#proyectos" class="pointer titlesp monse link-menu">
+            Lo que hacemos
+        </a>
+        <a href="'.get_home_url().'/#contacto" class="pointer titlesp monse link-menu">
+            Escribenos
+        </a>';
+        }
+    ?>
 </div>
 <div class="menu-completo blanco">
 </div>
