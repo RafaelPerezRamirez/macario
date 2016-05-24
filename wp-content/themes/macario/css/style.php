@@ -232,6 +232,8 @@ div#aceptar_pregunta_gafa {
 }
 .s1last{
 	font-weight: 100;
+	letter-spacing: 1px;
+	margin-bottom: 25px;
 }
 .s1title {
     margin-bottom: 30px;
@@ -241,8 +243,9 @@ div#aceptar_pregunta_gafa {
     margin-bottom: 23px;
 }
 .botonaccion{
+	letter-spacing: 1px;
     border: solid 2px white;
-    width: 260px;
+    width: 290px;
     line-height: 45px;
     border-radius: 45px;
 	<?php compatible( 'transition:1.75s ease;' );?>
@@ -272,18 +275,19 @@ img.peace {
     position: relative;
     top: 1px;
 	background-image: url('<?php plantilla(); ?>/images/logo1a.png');
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 .home .logo2{
 	background-image: url('<?php plantilla(); ?>/images/logo2.png');
 }
 .logo2 {
+	height: 49px!important;
     position: relative;
-    top: -10px;
+    top: -39px;
     left: 4px;
 	background-image: url('<?php plantilla(); ?>/images/logo2a.png');
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 .logo-macario div{
@@ -573,7 +577,7 @@ a.boton-proyecto:hover{
 .slide-animado{
 	background-image: url('<?php plantilla(); ?>/images/gifabout2.gif');
 	background-size: cover;
-	background-position: center left -10px;
+	background-position: center left -35px;
 }
 .flechas-slider{
 	position: fixed;
@@ -630,14 +634,25 @@ div#fp-nav ul li:nth-child(2) a span, div#fp-nav ul li:nth-child(4) a span{
 	width: 8px!important;
 	height: 8px!important;
 }
+div#fp-nav ul li:nth-child(2) a:hover span, div#fp-nav ul li:nth-child(4) a:hover span{
+	left: 8px!important;
+	width: 8px!important;
+	height: 8px!important;
+}
 .instaicon{
+	background-size: cover;
 	width: 25px;
 	height: 25px;
 	position: fixed;
 	z-index: 100000000000000;
 	bottom: 14%;
 	right: 5.7%;
+	<?php compatible( 'transition:.3s ease;' );?>
 	background-image: url('<?php plantilla(); ?>/images/insta.png');
+}
+.instaicon:hover{
+	width: 28px;
+	height: 28px;
 }
 .instaicon2{
 	background-image: url('<?php plantilla(); ?>/images/insta2.png')!important;
@@ -681,6 +696,19 @@ div#fp-nav ul li:nth-child(2) a span, div#fp-nav ul li:nth-child(4) a span{
 	width: 8px!important;
 	height: 8px!important;
 	left: 59%;
+}
+.animainicio{
+	opacity: 0;
+	pointer-events: none;
+	<?php compatible( 'transition:.75s ease;' );?>
+}
+.mostranima{
+	opacity: 1!important;
+	pointer-events: all!important;
+}
+#fp-nav{
+	opacity: 0;
+	pointer-events: none;
 }
 /*colores--------------------------------------*/
 <?php

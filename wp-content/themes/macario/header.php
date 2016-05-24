@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title><?php if( is_home() || is_front_page() ){ bloginfo('name'); }else{ wp_title(); };?></title>
-    <link rel="icon" href=""/>
+    <link rel="icon" href="<?php plantilla(); ?>/images/favicon.jpg"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,700italic,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -26,16 +26,16 @@
     <!-- Google Analytics -->
 </head>
 <body <?php body_class("normal");?>>
-<a href="http://casamacario.mx" class="logo-macario">
+<a href="http://casamacario.mx" class="logo-macario animainicio">
     <div class="logo1"></div>
     <div class="logo2"></div>
 </a>
-<div class="boton-menu">
+<div class="boton-menu animainicio">
     <span class="spmenu1"></span>
     <span class="spmenu2"></span>
     <span class="spmenu3"></span>
 </div>
-<a href="https://www.instagram.com/macariocasacreativa/" class="instaicon"></a>
+<a target="_blank" href="https://www.instagram.com/macariocasacreativa/" class="instaicon animainicio"></a>
 
 <div class="links-menu color_gris bolder">
     <a href="#" class="pointer titlesp monse link-menu lm1">

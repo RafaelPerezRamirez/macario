@@ -41,10 +41,18 @@ function changeselect(atribo){
 }
 jQuery(document).ready(function(){
 	$ = jQuery;
+
+    setTimeout(function(){
+        $('#fp-nav').addClass('mostranima');
+    }, 800);
+
+    setTimeout(function(){
+        $('.animainicio').addClass('mostranima');
+    }, 700);
+
     window.setTimeout(function() {
         $('#fp-nav ul li a span').addClass('spanblanco');
     }, 10);
-    $('.lm2').addClass('linkselect');
     window.setTimeout(function() {
         $('.contenidouno .anima1').addClass('muestranima');
     }, 500);
@@ -120,7 +128,7 @@ jQuery(document).ready(function(){
         $('.boton-menu').trigger('click');
     })
     $('.lm2').on('click', function(){
-        $('#fp-nav.right ul li:nth-child(1) a').trigger('click');
+        $('#fp-nav.right ul li:nth-child(2) a').trigger('click');
         $('.boton-menu').trigger('click');
     })
     $('.lm3').on('click', function(){
