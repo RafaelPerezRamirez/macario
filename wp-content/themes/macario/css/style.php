@@ -202,7 +202,7 @@ div#aceptar_pregunta_gafa {
 }
 .fondo-home, .azulsection{
 	background-color: #002eff;
-	background-image: url('<?php plantilla(); ?>/images/fondo1.png');
+	background-image: url('<?php plantilla(); ?>/images/fondos1.png');
 	background-repeat: repeat;
 	background-position: top -25px left -15px;
 }
@@ -416,7 +416,7 @@ img.peace {
 .links-menu {
     position: fixed;
 	<?php compatible( 'transition:.2s ease-out;' );?>
-    top: 50%;
+    top: 47%;
 	<?php compatible( 'transform: translateY(-50%);' );?>
     right: 10%;
 	z-index: 9000000000;
@@ -631,7 +631,7 @@ div#fp-nav ul li:nth-child(1) a span, div#fp-nav ul li:nth-child(3) a span{
 	background-image: none!important;
 }
 div#fp-nav ul li:nth-child(2) a span, div#fp-nav ul li:nth-child(4) a span{
-	background-image: url('<?php plantilla(); ?>/images/triangle.png');
+	background-image: url('<?php plantilla(); ?>/images/triang.png');
 	background-color: transparent!important;
 	background-size: cover!important;
 	border-radius: 0%!important;
