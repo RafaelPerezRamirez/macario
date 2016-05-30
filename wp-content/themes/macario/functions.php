@@ -70,6 +70,7 @@ function slidedos(){
 			<div class="atras-slider flecha">
 
 			</div>
+				<span class="color_azul monse uppercase lighter texto-proy">otro proyecto</span>
 			<div class="next-slider flecha">
 
 			</div>

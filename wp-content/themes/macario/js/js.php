@@ -154,66 +154,68 @@ jQuery(document).ready(function(){
         $('.instaicon').toggleClass('instaicon3');
     })
 
-    $('#fullpage').fullpage({
-        continuousVertical: true,
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['hola', 'secondSlide'],
-        showActiveTooltip: true,
-        keyboardScrolling: false,
-        animateAnchor: false,
-        anchors: ['home', 'proyectos', 'quienessomos', 'contacto'],
-        onLeave: function(index, nextIndex, direction){
-            if(nextIndex == 1){
-                changewall($('.fondo-home'));
-                changecontent($('.contenidouno'));
-                changeselect($('.lm2'));
-                $('.boton-menu').removeClass('botoncolor');
-                $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos1.png")'});
-                $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos2.png")'});
-                $('.foto-slide').removeClass('foto-svisible');
-                $('.instaicon').removeClass('instaicon2');
-                $('.spanblanco').removeClass('spanazul');
-                $('#fp-nav ul li a span').removeClass('spanazul');
-                $('#fp-nav ul li a span').addClass('spanblanco');
+    if ($(window).width() >= 1025) {
+        $('#fullpage').fullpage({
+            continuousVertical: true,
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['hola', 'secondSlide'],
+            showActiveTooltip: true,
+            keyboardScrolling: false,
+            animateAnchor: false,
+            anchors: ['home', 'proyectos', 'quienessomos', 'contacto'],
+            onLeave: function(index, nextIndex, direction){
+                if(nextIndex == 1){
+                    changewall($('.fondo-home'));
+                    changecontent($('.contenidouno'));
+                    changeselect($('.lm2'));
+                    $('.boton-menu').removeClass('botoncolor');
+                    $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos1.png")'});
+                    $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos2.png")'});
+                    $('.foto-slide').removeClass('foto-svisible');
+                    $('.instaicon').removeClass('instaicon2');
+                    $('.spanblanco').removeClass('spanazul');
+                    $('#fp-nav ul li a span').removeClass('spanazul');
+                    $('#fp-nav ul li a span').addClass('spanblanco');
+                }
+                if(nextIndex == 2){
+                    changewall($('.fondo-project'));
+                    changecontent($('.contenidodos'));
+                    $('.boton-menu').addClass('botoncolor');
+                    $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos1a.png")'});
+                    $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos2a.png")'});
+                    window.setTimeout(function() {
+                        $('.foto-slide').addClass('foto-svisible');
+                    }, 600);
+                    $('.instaicon').addClass('instaicon2');
+                    $('.spanblanco').removeClass('spanblanco');
+                    $('#fp-nav ul li a span').addClass('spanazul');
+                }
+                else if(nextIndex == 3){
+                    $('.instaicon').addClass('instaicon2');
+                    changewall($('.fondo-home-dos'));
+                    changecontent($('.contenidotres'));
+                    changeselect($('.lm1'));
+                    $('.boton-menu').addClass('botoncolor');
+                    $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos1.png")'});
+                    $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos2.png")'});
+                    $('.foto-slide').removeClass('foto-svisible');
+                    $('.spanblanco').removeClass('spanblanco');
+                    $('#fp-nav ul li a span').addClass('spanazul');
+                }
+                else if(nextIndex == 4){
+                    changewall($('.fondo-home'));
+                    changecontent($('.contenidocuatro'));
+                    changeselect($('.lm3'));
+                    $('.boton-menu').removeClass('botoncolor');
+                    $('.instaicon').removeClass('instaicon2');
+                    $('.spanblanco').removeClass('spanazul');
+                    $('#fp-nav ul li a span').addClass('spanblanco');
+                    $('#fp-nav ul li a span').removeClass('spanazul');
+                }
             }
-            if(nextIndex == 2){
-                changewall($('.fondo-project'));
-                changecontent($('.contenidodos'));
-                $('.boton-menu').addClass('botoncolor');
-                $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos1a.png")'});
-                $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos2a.png")'});
-                window.setTimeout(function() {
-                    $('.foto-slide').addClass('foto-svisible');
-                }, 600);
-                $('.instaicon').addClass('instaicon2');
-                $('.spanblanco').removeClass('spanblanco');
-                $('#fp-nav ul li a span').addClass('spanazul');
-            }
-            else if(nextIndex == 3){
-                $('.instaicon').addClass('instaicon2');
-                changewall($('.fondo-about'));
-                changecontent($('.contenidotres'));
-                changeselect($('.lm1'));
-                $('.boton-menu').addClass('botoncolor');
-                $('.logo1').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos1.png")'});
-                $('.logo2').css({'background-image':'url("<?php echo plantilla(); ?>/images/logos2.png")'});
-                $('.foto-slide').removeClass('foto-svisible');
-                $('.spanblanco').removeClass('spanblanco');
-                $('#fp-nav ul li a span').addClass('spanazul');
-            }
-            else if(nextIndex == 4){
-                changewall($('.fondo-home'));
-                changecontent($('.contenidocuatro'));
-                changeselect($('.lm3'));
-                $('.boton-menu').removeClass('botoncolor');
-                $('.instaicon').removeClass('instaicon2');
-                $('.spanblanco').removeClass('spanazul');
-                $('#fp-nav ul li a span').addClass('spanblanco');
-                $('#fp-nav ul li a span').removeClass('spanazul');
-            }
-        }
-    });
+        });
+    }
 
 	$('[data-link]').on('click',function(){
 		document.location.href = $(this).data('link');

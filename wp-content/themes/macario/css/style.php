@@ -17,9 +17,6 @@ body,html{
 	min-height:100%;
 	position: relative;
 }
-body.home{
-	overflow: hidden!important;
-}
 ol,ul {
 	list-style-position: inside;
 }
@@ -200,11 +197,18 @@ div#aceptar_pregunta_gafa {
 	opacity: 0;
 	z-index: -1;
 }
-.fondo-home, .azulsection{
+.fondo-home{
 	background-color: #002eff;
 	background-image: url('<?php plantilla(); ?>/images/fondos1.png');
 	background-repeat: repeat;
 	background-position: top -25px left -15px;
+}
+.fondo-home-dos{
+	background-color: #002eff;
+	background-image: url('<?php plantilla(); ?>/images/fondos1.png');
+	background-repeat: repeat;
+	background-position: top -25px left -15px;
+	width: 50%!important;
 }
 .fondo-project{
 	background-image: none;
@@ -245,7 +249,7 @@ div#aceptar_pregunta_gafa {
 .botonaccion{
 	letter-spacing: 1px;
     border: solid 2px white;
-    width: 290px;
+    width: 230px;
     line-height: 45px;
     border-radius: 45px;
 	<?php compatible( 'transition:1s ease;' );?>
@@ -737,6 +741,11 @@ div#fp-nav ul li:nth-child(2) a:hover span, div#fp-nav ul li:nth-child(4) a:hove
 .fopdos:hover{
 	color: white;
 	background: #002eff;
+}
+.texto-proy{
+	position: relative;
+	top: -10px;
+	font-size: 10px;
 }
 /*colores--------------------------------------*/
 <?php

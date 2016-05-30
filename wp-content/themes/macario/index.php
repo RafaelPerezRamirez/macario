@@ -1,8 +1,7 @@
 <?php get_header();?>
 <div class="fondos">
     <div class="fondo-home"></div>
-    <div class="fondo-project"></div>
-    <div class="fondo-projects"></div>
+    <div class="fondo-home-dos"></div>
     <div class="fondo-about"></div>
 </div>
 <div class="contenidointerno">
