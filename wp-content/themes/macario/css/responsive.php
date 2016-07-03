@@ -64,7 +64,7 @@
 		left: 0px!important;
 	}
 	.contenidouno {
-    	padding-top: 30%;
+		padding-top: 30%;
 	}
 	div#contenidotres {
     	height: initial!important;
@@ -148,8 +148,17 @@
 	.home .logo2 {
     	background-image: url('<?php plantilla(); ?>/images/logos2c.png');
 	}
+	.slide-proyectos.azulsection {
+    	height: 100vh;
+    	margin-top: 0px;
+    	padding-top: 30%;
+    	margin-bottom: 0px;
+	}
 }
 @media screen and (max-width: 800px){
+	.slide-proyectos.azulsection {
+		padding-top: 35%;
+	}
 	.ggrilla.ggrillaleft {
 		width: 100%;
 		display: block;
@@ -199,15 +208,8 @@
 	.s1content {
     	line-height: 40px;
 	}
-	.content{
-		height: initial;
-	}
-	.contenidouno {
-    	padding-top: 100px;
-    	padding-bottom: 150px;
-	}
-	.contenidocuatro .title {
-    	padding-top: 100px;
+	.contenidouno, .slide-proyectos.azulsection, .contenidocuatro .title{
+    	padding-top: 50%;
 	}
 	.boton-envia {
     	margin-bottom: 100px;

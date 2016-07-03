@@ -39,14 +39,14 @@
 
 <div class="links-menu color_gris bolder">
     <?php if(is_home()){
-        echo '<a href="#" class="pointer titlesp monse link-menu lm1">
+        echo '<a href="#quienessomos" class="pointer titlesp monse link-menu lm1">
             Si, somos Macario
         </a>
-        <a href="#" class="pointer titlesp monse link-menu lm2">
+        <a href="#proyectos" class="pointer titlesp monse link-menu lm2">
             Lo que hacemos
         </a>
-        <a href="#" class="pointer titlesp monse link-menu lm3">
-            Escribenos
+        <a href="#contacto" class="pointer titlesp monse link-menu lm3">
+            Escríbenos
         </a>';
     }else{
         echo '<a href="'.get_home_url().'/#quienessomos" class="pointer titlesp monse link-menu">
@@ -56,7 +56,7 @@
             Lo que hacemos
         </a>
         <a href="'.get_home_url().'/#contacto" class="pointer titlesp monse link-menu">
-            Escribenos
+            Escríbenos
         </a>';
         }
     ?>

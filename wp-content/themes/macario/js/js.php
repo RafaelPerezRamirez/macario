@@ -216,6 +216,9 @@ jQuery(document).ready(function(){
             }
         });
     }
+     if ($(window).width() < 1025) {
+        $('.contenidocuatro').attr('id','contacto')
+     }
 
 	$('[data-link]').on('click',function(){
 		document.location.href = $(this).data('link');

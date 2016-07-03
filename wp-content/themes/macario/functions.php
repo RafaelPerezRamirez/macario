@@ -43,10 +43,10 @@ function slideuno(){
 			Hola!
 		</div>
 		<div class="title bolder shadowtext s1content anima2">
-			Somos Macario, potenciadores de marcas
+			Somos Macario, potenciadores de marcas.
 		</div>
 		<div class="small shadowtext s1content s1last lighter anima3">
-			Creamos experiencias asombrosas
+			Creamos experiencias asombrosas.
 		</div>
 		<div class="small botonaccion color_blanco text-center monse s1buton pointer botontrabajo">
 			Nuestro trabajo
@@ -65,7 +65,7 @@ function slidedos(){
 		'order'			=> 'ASC',
 	));
 ?>
-	<div class="contenidodos content">
+	<div class="contenidodos content" id="proyectos">
 		<div class="flechas-slider">
 			<div class="atras-slider flecha">
 
@@ -103,7 +103,7 @@ function slidedos(){
 function slidetres(){
 ?>
 <div class="contenidotres content" id="contenidotres">
-	<div class="slide-proyectos azulsection">
+	<div class="slide-proyectos azulsection" id="quienessomos">
 		<div class="texto-superior color_blanco monse text-left lighter">
 			<div class="title shadowtext s1content bolder anima1">
 				Somos Macario.
@@ -127,7 +127,7 @@ function slidecuatro(){
 ?>
 	<div class="contenidocuatro content">
 		<div class="monse color_blanco text-center title bolder">
-			¡Mandanos un mail!
+			¡Mándanos un mail!
 		</div>
 		<a href="mailto:contacto@casamacario.mx" class="boton-envia blanco text-center color_azul monse small">contacto@casamacario.mx</a>
 	</div>

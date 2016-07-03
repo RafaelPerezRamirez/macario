@@ -37,7 +37,7 @@
             $proyectos = new macario\Proyectos($ids);
         echo '<div class="footerproyecto">
             <a href="mailto:contacto@casamacario.mx" class="foop azul color_blanco monse lighter small text-center fopuno">
-                Mandanos un mail
+                Mándanos un mail
             </a><!--
             --><a href="'.$proyectos->Permalink.'" class="foop color_azul blanco monse lighter small text-center fopdos">
                 Siguiente proyecto
